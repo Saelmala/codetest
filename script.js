@@ -30,7 +30,7 @@ function displayVideoTitles(data) {
   const list = document.createElement("ul")
   
   // Ville inte ha några bulletpoints i listan
-  list.style.listStyleType = "none";
+  list.style.listStyleType = "none"
 
   for (let i = 0; i < data.items.length; i++) {
     // Tar fram varje videos titel och assetId
@@ -61,12 +61,12 @@ function displayVideoTitles(data) {
         if (currentListItem.querySelector("img")) {
           currentListItem.querySelector("img").style.display = "block"
         }
-        currentVideoPlayer = null;
+        currentVideoPlayer = null
       }
 
       // Kollar om det man klickar är samma som det som man redan klickat på
       if (currentListItem !== listItem) {
-        currentListItem = listItem;
+        currentListItem = listItem
         if (currentListItem.querySelector("img")) {
           currentListItem.querySelector("img").style.display = "none"
         }
@@ -81,9 +81,9 @@ function displayVideoTitles(data) {
         .then(info => {
 
           // Testade för att se så det stämde
-          //console.log(assetId);
-          //console.log(playURL);
-          //console.log(info);
+          //console.log(assetId)
+          //console.log(playURL)
+          //console.log(info)
 
           // Skapar videoElement och sätter upp användarens kontroll + sätter upp video source
           const videoElement = document.createElement("video")
@@ -105,9 +105,9 @@ function displayVideoTitles(data) {
         .catch(error => console.error(error))
 
         // Test
-        //console.log("Clicked On: " + title);
+        //console.log("Clicked On: " + title)
       }
-    });
+    })
 
     list.appendChild(listItem)
   }
