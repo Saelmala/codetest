@@ -18,13 +18,13 @@ function loadVideoList() {
     })
     .then(data => {
       console.log(data)
-      displayVideoTitles(data)
+      displayVideos(data)
     })
     .catch((error) => console.error("There was an error when fetching ", error))
 }
 
 
-function displayVideoTitles(data) {
+function displayVideos(data) {
   // Gjorde de fetchade videosen som en lista 
   const videoDiv = document.getElementById("video")
   const list = document.createElement("ul")
